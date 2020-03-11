@@ -17,5 +17,14 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     // https://mvnrepository.com/artifact/org.testng/testng
     testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
+    implementation 'junit:junit:4.12'
+    implementation 'org.testng:testng:6.9.6'
 
 }
+
+test {
+    useTestNG() {
+        suites "src/test/resources/TestNG.xml"
+    }
+}
+
