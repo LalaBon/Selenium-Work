@@ -1,13 +1,7 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static java.lang.Thread.sleep;
-import static org.testng.Assert.assertEquals;
 
 public class HomePageTest extends BaseTest  {
 
@@ -15,7 +9,7 @@ public class HomePageTest extends BaseTest  {
         @Test
         public void titleTest() {
 
-        driver.get("https://testkwidos.tk/");
+        driver.get("https://kwidos.com/");
 
         String title = driver.getTitle();
         Assert.assertEquals(title, "Kwidos");
@@ -28,7 +22,7 @@ public class HomePageTest extends BaseTest  {
         @Test
         public void ServiceProviderRegistrationTest () throws InterruptedException {
 
-        driver.get("https://testkwidos.tk/auth/register/contrcotr");
+        driver.get("https://kwidos.com/auth/register/contrcotr");
 
 
         Thread.sleep(4000);

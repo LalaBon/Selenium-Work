@@ -22,7 +22,7 @@ public class OfferListsTest extends BaseTest {
         List<WebElement> cardLists = driver.findElements (By.cssSelector("[class*='card-shape']"));
         Assert.assertEquals(cardLists.size(), 10);
     }
-}
+
 
 
         @Test
