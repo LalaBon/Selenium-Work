@@ -2,9 +2,9 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class NavigationBar extends BasePage{
+public class WidgetNavigationBar extends BasePage {
 
-    public Navigation(WebDriver givendriver) {
-        super
+    public WidgetNavigationBar (WebDriver givendriver)  {
+        super(givendriver);
     }
 }

@@ -3,15 +3,11 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
-    WebDriver driver;
-    WebDriver wait;
 
     public HomePage (WebDriver givendriver) {
-        driver = givendriver;
-        wait = new WebDriverWait(driver, 4);
-
+        super(givendriver);
     }
 
     public void OpenPage() {
@@ -19,11 +15,8 @@ public class HomePage {
 
     }
 
-    public void clickToOpenSignIn {
+    public void clickToOpenSignIn() {
         clickToElementByXpath("//*[contains(text(), 'SIGN IN')]");
-    }
-
-    private void clickToElementByXpath(String s) {
     }
 
 }

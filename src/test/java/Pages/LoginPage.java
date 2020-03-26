@@ -2,22 +2,14 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    public LoginPage (WebDriver givendriver) { super(givendriver);  }
 
-    public LoginPage (WebDriver givendriver) {
-        driver = givendriver;
-        wait = new WebDriverWait
-    }
-
-    private String getSuccessText(String s) {
+    public String getSuccessText(String s) {
         String st = "Success";
         return st;
-
     }
 
     public String getErrorText (String cssSelector) {
@@ -27,10 +19,26 @@ public class LoginPage {
         return actualText;
     }
 
-    public void openLoginPage()  {
-        driver.get("https://kwidos.tk/auth/login");
+    public void  openPage(String input)  {
+       String input = driver.get("https://kwidos.tk/auth/login");
+       return input;
 
     }
 
-    public void enterEmail(String)
+    public void enterEmail(String email)  {
+        findElement("#email").sendKeys(email);
+        return email;
+    }
+
+    public void  enterPassword(String password)  {
+        findElement("#password").sendKeys(password);
+        return this;
+    }
+
+    public void LoginPage clickSubmit()  {
+        clickToElement("[type='submit']");
+        return this;
+    }
+
+
 }
